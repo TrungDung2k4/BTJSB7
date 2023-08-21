@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài Tập Mảng</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./index.css" />
+  <body>
+    <!-- Bài 0 -->
+    <div class="exercise text-center mx-auto mt-5 d-block">
+      <h2 class="mb-4">Nhập Mảng</h2>
+      <div class="row mb-4">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control text-center exercise__item"
+            placeholder="Phần Tử"
+            id="element"
+          />
+        </div>
+      </div>
+      <button id="add">Thêm</button>
+      <div class="result exercise__item" id="added"></div>
+      <select id="choice" class="custom-select mt-4 text-center">
+        <option selected>Chọn Chức Năng</option>
+        <option value="1">Tính Tổng Số Dương</option>
+        <option value="2">Đếm Số Dương</option>
+        <option value="3">Tìm Số Nhỏ Nhất</option>
+        <option value="4">Tìm Số Dương Nhỏ Nhất</option>
+        <option value="5">Tìm Số Chẵn Cuối Cùng</option>
+        <option value="6">Đổi Chỗ Phần Tử</option>
+        <option value="7">Sắp Xếp Tăng Dần</option>
+        <option value="8">Tìm Số Nguyên Tố Đầu Tiên</option>
+        <option value="9">Đếm Số Nguyên</option>
+        <option value="10">So Sánh Số Lượng Số Dương Và Số Âm</option>
+      </select>
+    </div>
+    <!-- Bài 1 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex1">
+      <h2 class="mb-4">Tính Tổng Số Dương</h2>
+      <button id="calculateSum">Tính</button>
+      <div class="result exercise__item" id="calculatedSum"></div>
+    </div>
+    <!-- Bài 2 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex2">
+      <h2>Đếm Số Dương</h2>
+      <button id="countPositiveElements">Đếm</button>
+      <div class="result exercise__item" id="countedPositiveElements"></div>
+    </div>
+    <!-- Bài 3 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex3">
+      <h2 class="mb-4">Tìm Số Nhỏ Nhất</h2>
+      <button id="findMinimumElement">Tìm</button>
+      <div class="result exercise__item" id="foundMinimumElement"></div>
+    </div>
+    <!-- Bài 4 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex4">
+      <h2 class="mb-4">Tìm Số Dương Nhỏ Nhất</h2>
+      <button id="findMinimumPositiveElement">Tìm</button>
+      <div class="result exercise__item" id="foundMinimumPositiveElement"></div>
+    </div>
+    <!-- Bài 5 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex5">
+      <h2 class="mb-4">Tìm Số Chẵn Cuối Cùng</h2>
+      <button id="findLastEvenElement">Tìm</button>
+      <div class="result exercise__item" id="foundLastEvenElement"></div>
+    </div>
+    <!-- Bài 6 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex6">
+      <h2 class="mb-4">Đổi Chỗ Phần Tử</h2>
+      <div class="row mb-4">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control text-center exercise__item"
+            placeholder="Vị Trí 1"
+            id="position1"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control text-center exercise__item"
+            placeholder="Vị Trí 2"
+            id="position2"
+          />
+        </div>
+      </div>
+      <button id="swapElements">Đổi</button>
+      <div class="result exercise__item" id="swappedElements"></div>
+    </div>
+    <!-- Bài 7 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex7">
+      <h2 class="mb-4">Sắp Xếp Tăng Dần</h2>
+      <button id="sortArray">Sắp Xếp</button>
+      <div class="result exercise__item" id="sortedArray"></div>
+    </div>
+    <!-- Bài 8 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex8">
+      <h2 class="mb-4">Tìm Số Nguyên Tố Đầu Tiên</h2>
+      <button id="findFirstPrime">Tìm</button>
+      <div class="result exercise__item" id="foundFirstPrime"></div>
+    </div>
+    <!-- Bài 9 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex9">
+      <h2 class="mb-4">Đếm Số Nguyên</h2>
+      <div class="row mb-4">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control text-center exercise__item"
+            placeholder="Mảng Mới"
+            id="newArrayElement"
+          />
+        </div>
+      </div>
+      <button id="addNewArrayElement">Thêm</button>
+      <div class="result exercise__item" id="newArray"></div>
+      <button class="mt-4" id="countIntegers">Đếm</button>
+      <div class="result exercise__item" id="countedIntegers"></div>
+    </div>
+    <!-- Bài 10 -->
+    <div class="exercise text-center mx-auto mt-5" id="ex10">
+      <h2 class="mb-4">So Sánh Số Lượng Số Dương Và Số Âm</h2>
+      <button id="compareNumbers">So Sánh</button>
+      <div class="result exercise__item" id="comparedNumbers"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
